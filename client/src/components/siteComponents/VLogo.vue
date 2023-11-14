@@ -18,9 +18,11 @@ import LogoImage from "./LogoImage.vue";
 .logo {
   display: flex;
   align-items: center;
+  gap: 4px;
+}
+.logo-icon {
   height: 53px;
   width: 36px;
-  gap: 4px;
 }
 .logo-text {
   color: #274C5B;
