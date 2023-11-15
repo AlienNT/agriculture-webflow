@@ -29,10 +29,8 @@ const title = computed(() => {
 </template>
 
 <style scoped lang="scss">
-@import "../../../assets/css/variables";
-
 .navigation-list__item-link {
-  color: $colorPrimary;
+  color: map-get($colors, greenishBlue);
   font-family: $mainFont;
   font-size: 20px;
   font-style: normal;

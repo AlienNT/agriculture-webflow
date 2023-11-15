@@ -7,13 +7,12 @@ const {cartCounter} = useCart()
 <template>
   <button class="cart-button">
     <span class="cart-counter">
-      Cart ({{cartCounter}})
+      Cart ({{ cartCounter }})
     </span>
   </button>
 </template>
 
 <style scoped lang="scss">
-@import "../../assets/css/variables";
 .cart-button {
   background: none;
   cursor: pointer;
@@ -23,12 +22,13 @@ const {cartCounter} = useCart()
   align-items: center;
   gap: 12px;
   padding: 5px 15px 5px 5px;
-  color: #274C5B;
+  color: map-get($colors, greenishBlue);
   font-family: $mainFont;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+
   &:before {
     content: '';
     display: block;
