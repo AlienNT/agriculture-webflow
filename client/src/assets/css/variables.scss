@@ -1,12 +1,4 @@
-//colors
-
-$colorPrimary: #274C5B;
-$colorSecondary: #7EB693;
-$colorThird: #EFD372;
-$colorFourth: #525C60;
-$colorFifth: #D4D4D4;
-$colorSixth: #E4E4E4;
-$colorSeventh: #C9DECF;
-
-$mainFont: 'Roboto', sans-serif;
-$secondFont: 'Open Sans', sans-serif;
+@use 'sass:map';
+@import "scss-variables/fonts";
+@import "scss-variables/colors";
+@import "scss-variables/breakpoints";

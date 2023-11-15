@@ -24,7 +24,7 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .not-found-page {
   background: url("../../public/images/icon/404.png") no-repeat center left / cover;
   display: flex;
@@ -50,8 +50,8 @@
 }
 
 .error-title {
-  color: #274C5B;
-  font-family: Roboto;
+  color: map-get($colors, greenishBlue);
+  font-family: $mainFont;
   font-size: 70px;
   font-style: normal;
   font-weight: 800;
@@ -59,8 +59,8 @@
 }
 
 .error-description {
-  color: #525C60;
-  font-family: Open Sans;
+  color: map-get($colors, grayishBlue);;
+  font-family: $secondFont;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -74,7 +74,7 @@
   align-items: center;
   gap: 10px;
   border-radius: 16px;
-  background: #274C5B;
+  background: map-get($colors, greenishBlue);;
   color: #FFFFFF;
   flex-wrap: nowrap;
   height: 80px;
