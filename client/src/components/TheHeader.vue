@@ -2,6 +2,8 @@
 
 import VLogo from "./siteComponents/VLogo.vue";
 import HeaderNavigation from "./navigations/headerNavigation/HeaderNavigation.vue";
+import SearchField from "./siteComponents/SearchField.vue";
+import CartButton from "./siteComponents/CartButton.vue";
 </script>
 
 <template>
@@ -15,10 +17,10 @@ import HeaderNavigation from "./navigations/headerNavigation/HeaderNavigation.vu
           <HeaderNavigation/>
         </div>
         <div class="col header-col header-col__search">
-          search
+          <SearchField/>
         </div>
         <div class="col header-col header-col__cart">
-          cart
+          <CartButton/>
         </div>
       </div>
     </div>
@@ -47,8 +49,7 @@ $headerBGColor: #FFFFFF;
   width: fit-content;
 }
 
-.header-col__search,
 .header-col__cart {
-  flex: none;
+  //flex: none;
 }
 </style>
