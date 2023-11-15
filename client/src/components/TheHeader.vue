@@ -46,10 +46,9 @@ $headerBGColor: #FFFFFF;
   display: flex;
   align-items: center;
   flex: 1 1 auto;
-  width: fit-content;
 }
 
 .header-col__cart {
-  //flex: none;
+  flex: none;
 }
 </style>
