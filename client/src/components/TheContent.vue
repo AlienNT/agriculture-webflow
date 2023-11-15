@@ -9,5 +9,7 @@
 </template>
 
 <style scoped>
-
+.main {
+  flex: 1 1 auto;
+}
 </style>

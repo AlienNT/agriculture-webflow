@@ -5,11 +5,24 @@ import TheFooter from "./components/TheFooter.vue";
 </script>
 
 <template>
-  <TheHeader/>
-  <TheContent/>
+  <div class="fullscreen-wrapper">
+    <TheHeader/>
+    <TheContent/>
+  </div>
   <TheFooter/>
 </template>
 
 <style lang="scss">
-@import "assets/css/main";
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.fullscreen-wrapper {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+}
 </style>
