@@ -1,6 +1,6 @@
 <script setup>
 import HeaderNavigationItem from "./HeaderNavigationItem.vue";
-import {useNavigation} from "../../../composables/useNavigation.js";
+import {useNavigation} from "@/composables/useNavigation.js";
 
 const {headerNavigation} = useNavigation()
 
