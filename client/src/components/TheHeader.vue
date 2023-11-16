@@ -1,7 +1,7 @@
 <script setup>
 
 import VLogo from "./siteComponents/VLogo.vue";
-import HeaderNavigation from "./navigations/headerNavigation/HeaderNavigation.vue";
+import HeaderNavigation from "./headerComponents/HeaderNavigation.vue";
 import SearchField from "./siteComponents/SearchField.vue";
 import CartButton from "./siteComponents/CartButton.vue";
 </script>
