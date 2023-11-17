@@ -4,6 +4,7 @@ import FooterCopyright from "@/components/footerComponents/FooterCopyright.vue";
 import FooterContacts from "@/components/footerComponents/FooterContacts.vue";
 import VLogo from "@/components/siteComponents/VLogo.vue";
 import FooterSocial from "@/components/footerComponents/FooterSocial.vue";
+import FooterUtility from "@/components/footerComponents/FooterUtility.vue";
 </script>
 
 <template>
@@ -25,7 +26,9 @@ import FooterSocial from "@/components/footerComponents/FooterSocial.vue";
             <FooterSocial/>
           </div>
         </div>
-        <div class="col footer-col"></div>
+        <div class="col footer-col">
+          <FooterUtility/>
+        </div>
       </div>
       <div class="row copyright-row">
         <div class="col copyright-col">
