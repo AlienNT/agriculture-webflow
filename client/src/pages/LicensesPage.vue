@@ -4,15 +4,14 @@ import PageTemplate from "@/components/templates/PageTemplate.vue";
 </script>
 
 <template>
+  <div class="page password-protect">
+    <PageTemplate
+        page-banner-title="Protected Page"
+    >
 
+    </PageTemplate>
+  </div>
 </template>
-<div class="page password-protect">
-<PageTemplate
-    page-banner-title="Protected Page"
->
-
-</PageTemplate>
-</div>
 <style scoped>
 
 </style>
