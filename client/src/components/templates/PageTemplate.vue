@@ -1,6 +1,6 @@
 <script setup>
 import {computed} from "vue";
-import PageBanner from "@/components/siteComponents/PageBanner.vue";
+import PageBanner from "@/components/pageComponents/PageBanner.vue";
 
 const props = defineProps({
   pageBannerTitle: {
