@@ -16,6 +16,9 @@ const props = defineProps({
   }
 })
 
+defineEmits([
+  'onClick'
+])
 const classes = ['blue', 'yellow', 'white', "paginate"]
 
 const styleClass = computed(() => {

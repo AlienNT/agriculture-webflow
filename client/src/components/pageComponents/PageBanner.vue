@@ -62,7 +62,7 @@ $color: map-get($colors, greenishBlue);
 $bgColor: map-get($colors, moderateGreen);
 
 .page-banner {
-  height: 100%;
+  flex: 1 1;
   display: flex;
   align-items: center;
   justify-content: center;

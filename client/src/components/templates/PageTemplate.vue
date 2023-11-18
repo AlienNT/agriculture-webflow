@@ -1,6 +1,7 @@
 <script setup>
 import {computed} from "vue";
 import PageBanner from "@/components/pageComponents/PageBanner.vue";
+import TheFooter from "@/components/TheFooter.vue";
 
 const props = defineProps({
   pageBannerTitle: {
@@ -8,6 +9,9 @@ const props = defineProps({
   },
   pageBannerImage: {
     type: String
+  },
+  pageContent: {
+    type: Array
   },
   maxHeight: {
     type: [Number, String],
@@ -25,33 +29,21 @@ const style = computed(() => {
 
 <template>
   <div class="page-template">
-    <div
-        class="page-banner"
-        :style="style"
-    >
-      <PageBanner
-          :value="pageBannerTitle"
-          :image="pageBannerImage"
-      >
-        <template v-slot:content>
-          <slot name="bannerContent"></slot>
-        </template>
-      </PageBanner>
-    </div>
     <div class="page-content">
       <slot name="content"/>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .page-template {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  min-height: $viewportHeight;
 }
 
-.page-banner {
-  flex: 1;
+.page-content {
+  flex: 0 0 100%;
+  height: 100%;
 }
 </style>

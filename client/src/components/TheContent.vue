@@ -3,14 +3,14 @@
 </script>
 
 <template>
-  <div class="main">
+  <div class="content">
     <router-view/>
   </div>
 </template>
 
 <style scoped>
-.main {
-  flex: 1 1 auto;
+.content {
+  height: 100%;
   display: flex;
 }
 </style>
