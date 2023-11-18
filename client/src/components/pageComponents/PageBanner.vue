@@ -71,6 +71,8 @@ $bgColor: map-get($colors, moderateGreen);
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .page-banner__title {
