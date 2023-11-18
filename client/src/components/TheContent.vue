@@ -10,7 +10,6 @@
 
 <style scoped>
 .content {
-  height: 100%;
   display: flex;
 }
 </style>
