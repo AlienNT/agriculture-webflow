@@ -11,5 +11,6 @@
 <style scoped>
 .main {
   flex: 1 1 auto;
+  display: flex;
 }
 </style>
