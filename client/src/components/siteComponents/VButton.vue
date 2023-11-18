@@ -1,11 +1,83 @@
 <script setup>
+import {computed} from "vue";
 
+const props = defineProps({
+  disabled: {
+    type: Boolean,
+    default: null
+  },
+  label: {
+    type: String,
+    default: 'Button'
+  },
+  styleType: {
+    type: Number,
+    default: 0
+  }
+})
+
+const classes = ['blue', 'yellow', 'white', "paginate"]
+
+const styleClass = computed(() => {
+  return classes[props.styleType] || classes[0]
+})
 </script>
 
 <template>
-
+  <button
+      class="button"
+      type="button"
+      :class="styleClass"
+      :disabled="disabled"
+      @click="$emit('onClick')"
+  >
+    {{ label }}
+  </button>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+.button {
+  display: flex;
+  padding: 28px 39px 29px 39px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  gap: 10px;
+  font-family: $mainFont;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
 
+  &:after {
+    content: '';
+    display: block;
+    background: url("/images/icon/Aerrow.svg") no-repeat center / contain;
+    width: 19px;
+    height: 19px;
+  }
+}
+
+.blue, .paginate {
+  background: map-get($colors, greenishBlue);
+  color: map-get($colors, light);
+}
+
+.yellow, .white {
+  color: map-get($colors, greenishBlue);
+}
+
+.yellow {
+  background: map-get($colors, buffaloLeather);
+}
+
+.white {
+  background: map-get($colors, light);
+  border: 1px solid map-get($colors, greenishBlue);
+}
+
+.paginate {
+  background: map-get($colors, greenishBlue);
+}
 </style>
