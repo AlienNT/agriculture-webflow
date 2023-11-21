@@ -4,7 +4,7 @@ import VRate from "@/components/siteComponents/VRate.vue";
 import VTitle from "@/components/siteComponents/VTitle.vue";
 import VTag from "@/components/siteComponents/VTag.vue";
 import VImage from "@/components/siteComponents/VImage.vue";
-import {computed, readonly} from "vue";
+import {computed} from "vue";
 
 const props = defineProps({
   cardData: {
