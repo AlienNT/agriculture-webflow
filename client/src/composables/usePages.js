@@ -1,69 +1,9 @@
 import {computed, reactive} from "vue";
+import homepageContent from "@/composables/fakeData/homepageContent.js";
 
 const state = reactive({
         pages: [
-            {
-                _id: 1,
-                name: 'home',
-                content: [
-                    {
-                        _id: 1,
-                        type: 'pageBanner',
-                        bannerImages: {
-                            img: '/images/pages_design/img/bg_homepage_image.png',
-                            pattern: '/images/pages_design/svg/bg_homepage_pattern.svg'
-                        },
-                        bannerContent: {
-                            cursive: '100% Natural Food',
-                            title: 'Choose the best healthier way of life',
-                            buttonLabel: 'Explore Now',
-                            buttonRoute: '/shop'
-                        },
-                    },
-                    {
-                        _id: 2,
-                        type: 'pageCardContent',
-                        cursive: 'About Us',
-                        title: 'We Believe in Working Accredited Farmers',
-                        buttonLabel: `Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.`,
-                        buttonRoute: '/shop',
-                        list: [
-                            {
-                                _id: 1,
-                                title: 'Organic Foods Only',
-                                description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
-                                icon: ''
-                            },
-                            {
-                                _id: 2,
-                                title: 'Quality Standards',
-                                description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
-                                icon: ''
-                            },
-                        ]
-                    },
-                    {
-                        _id: 3,
-                        type: 'pageOffers',
-                        list: [
-                            {
-                                _id: 1,
-                                label: 'Natural!!',
-                                title: 'Get Garden Fresh Fruits',
-                                colorScheme: 'dark',
-                                image: '/images/pages_design/img/offer_1.jpg'
-                            },
-                            {
-                                _id: 2,
-                                label: 'Offer!!',
-                                title: 'Get 10% off on Vegetables',
-                                colorScheme: 'light',
-                                image: '/images/pages_design/img/offer_2.jpg'
-                            }
-                        ]
-                    }
-                ]
-            },
+            homepageContent,
             {
                 _id: 2,
                 name: 'about',
@@ -237,9 +177,13 @@ export function usePages() {
         return getPageByName(name).value?.content?.find(contentItem => contentItem?.type === 'pageBanner')?.bannerImages
     })
 
+    const pageContent = (name) => computed(() => {
+        return getPageByName(name).value?.content?.sort((a, b) => a?.order - b?.order)
+    })
 
     return {
         getPageByName,
-        bannerImagesByName
+        bannerImagesByName,
+        pageContent
     }
 }

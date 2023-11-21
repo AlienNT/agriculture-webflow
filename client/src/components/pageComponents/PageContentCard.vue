@@ -5,9 +5,7 @@
 <template>
   <div class="page-content-card">
     <div class="container">
-      <div class="page-content-card__wrapper">
-        <slot name="content"/>
-      </div>
+      <slot name="content"/>
     </div>
   </div>
 </template>

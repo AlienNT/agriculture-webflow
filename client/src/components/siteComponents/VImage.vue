@@ -102,7 +102,7 @@ img {
   width: 100%;
   height: 100%;;
   background-color: #F9F8F8;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-blend-mode: multiply;
