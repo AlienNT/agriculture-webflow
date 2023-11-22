@@ -32,13 +32,13 @@ export default {
                     _id: 1,
                     title: 'Organic Foods Only',
                     description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
-                    icon: ''
+                    image: '/images/icon/mailbox.svg'
                 },
                 {
                     _id: 2,
                     title: 'Quality Standards',
                     description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
-                    icon: ''
+                    image: '/images/icon/vegan_food.svg'
                 },
             ]
         },

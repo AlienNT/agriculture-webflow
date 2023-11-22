@@ -6,6 +6,7 @@ import VTitle from "@/components/siteComponents/VTitle.vue";
 import VCursive from "@/components/siteComponents/VCursive.vue";
 import VDescription from "@/components/siteComponents/VDescription.vue";
 import VImage from "@/components/siteComponents/VImage.vue";
+import PageContentList from "@/components/pageComponents/PageContentList.vue";
 
 const props = defineProps({
   content: {
@@ -38,6 +39,10 @@ const props = defineProps({
           <VDescription
               class="description"
               :value="content?.description"
+          />
+          <PageContentList
+              class="list"
+              :list-data="content?.list"
           />
           <VButton
               :label="content?.buttonLabel"
@@ -74,5 +79,9 @@ const props = defineProps({
 
 .description {
   margin-bottom: 46px;
+}
+.list {
+  margin-bottom: 46px;
+  gap: 30px;
 }
 </style>
