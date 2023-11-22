@@ -1,4 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
+@import "flex-grid";
+@import "normalize";
+
+html, body{
+  height: 100%;
+}
+
+.page {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
 }

@@ -1,1 +1,4 @@
-$colorPrimary: #fff;
+@use 'sass:map';
+@import "scss-variables/fonts";
+@import "scss-variables/colors";
+@import "scss-variables/breakpoints";
