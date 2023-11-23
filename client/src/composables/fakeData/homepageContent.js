@@ -152,6 +152,54 @@ export default {
 
                 },
             ]
+        },
+        {
+            _id: 5,
+            order: 6,
+            type: 'pageOfferProducts',
+            title: 'We Offer Organic For You',
+            cursive: 'Offer',
+            buttonRoute: '/shop',
+            buttonLabel: 'View All Product',
+            list: [
+                {
+                    _id: 1,
+                    tag: 'Vegetable',
+                    title: 'Broccoli',
+                    price: 20,
+                    discount: 45,
+                    rating: 5,
+                    image: "/images/content/broccoli.png"
+                },
+                {
+                    _id: 2,
+                    tag: 'Vegetable',
+                    title: 'Squash',
+                    price: 20,
+                    discount: 40,
+                    rating: 5,
+                    image: '/images/content/squash.png'
+                },
+                {
+                    _id: 3,
+                    tag: 'Vegetable',
+                    title: 'Onion',
+                    price: 20,
+                    discount: 20,
+                    rating: 5,
+                    image: '/images/content/onion.png'
+                },
+                {
+                    _id: 4,
+                    tag: 'Vegetable',
+                    title: 'Cabbage',
+                    price: 20,
+                    discount: 20,
+                    rating: 5,
+                    image: '/images/content/cabbage.png'
+                },
+            ]
+
         }
     ]
 }

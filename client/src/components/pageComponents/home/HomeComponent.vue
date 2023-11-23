@@ -4,6 +4,7 @@ import HomeBanner from "@/components/pageComponents/home/HomeBanner.vue";
 import HomeContentCard from "@/components/pageComponents/home/HomeContentCard.vue";
 import HomeOffers from "@/components/pageComponents/home/HomeOffers.vue";
 import HomeShop from "@/components/pageComponents/home/HomeShop.vue";
+import HomeOfferProducts from "@/components/pageComponents/home/HomeOfferProducts.vue";
 
 const props = defineProps({
   componentType: {
@@ -24,6 +25,8 @@ const component = computed(() => {
       return HomeOffers
     case 'pageShop':
       return HomeShop
+    case 'pageOfferProducts':
+      return HomeOfferProducts
   }
 })
 
