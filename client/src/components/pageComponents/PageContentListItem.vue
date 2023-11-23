@@ -26,9 +26,11 @@ const description = computed(() => {
 
 <template>
   <li class="page-content-list-item">
-    <div class="list-item__icon">
+    <div
+        v-if="image"
+        class="list-item__icon"
+    >
       <VImage
-          v-if="image"
           :src="image"
           class="image"
       />

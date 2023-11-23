@@ -199,7 +199,31 @@ export default {
                     image: '/images/content/cabbage.png'
                 },
             ]
-
+        },
+        {
+            _id: 6,
+            order: 7,
+            type: 'pageWhoWeAre',
+            title: 'Econis is a Friendly Organic Store',
+            cursive: 'Eco Friendly',
+            background: '/images/pages_design/img/bg_who-we-are.jpg',
+            list: [
+                {
+                    _id: 1,
+                    title: 'Start with Our Company First',
+                    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.'
+                },
+                {
+                    _id: 2,
+                    title: 'Learn How to Grow Yourself',
+                    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.'
+                },
+                {
+                    _id: 3,
+                    title: 'Farming Strategies of Today',
+                    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.'
+                },
+            ]
         }
     ]
 }
