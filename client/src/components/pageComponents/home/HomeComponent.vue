@@ -3,6 +3,7 @@ import {computed} from "vue";
 import HomeBanner from "@/components/pageComponents/home/HomeBanner.vue";
 import HomeContentCard from "@/components/pageComponents/home/HomeContentCard.vue";
 import HomeOffers from "@/components/pageComponents/home/HomeOffers.vue";
+import HomeShop from "@/components/pageComponents/home/HomeShop.vue";
 
 const props = defineProps({
   componentType: {
@@ -21,6 +22,8 @@ const component = computed(() => {
       return HomeContentCard
     case 'pageOffers':
       return HomeOffers
+    case 'pageShop':
+      return HomeShop
   }
 })
 

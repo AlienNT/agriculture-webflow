@@ -21,7 +21,7 @@ defineProps({
 <style scoped>
 .page-content-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 
 }
 </style>
