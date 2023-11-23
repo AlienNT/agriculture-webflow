@@ -62,6 +62,96 @@ export default {
                     image: '/images/pages_design/img/offer_2.jpg'
                 }
             ]
+        },
+        {
+            _id: 4,
+            order: 4,
+            type: 'pageShop',
+            title: 'Our Products',
+            cursive: 'Categories ',
+            buttonLabel: 'Load More',
+            list: [
+                {
+                    _id: 1,
+                    tag: 'Vegetable',
+                    title: 'Calabrese Broccoli',
+                    price: 20,
+                    discount: 35,
+                    rating: 5,
+                    image: '/images/content/broccoli.png'
+
+                },
+                {
+                    _id: 2,
+                    tag: 'Fresh',
+                    title: 'Fresh Banana Fruites',
+                    price: 20,
+                    discount: 30,
+                    rating: 5,
+                    image: '/images/content/banana.png'
+
+                },
+                {
+                    _id: 3,
+                    tag: 'Millets',
+                    title: 'White Nuts',
+                    price: 20,
+                    discount: 25,
+                    rating: 4,
+                    image: '/images/content/white-nuts.png'
+
+                },
+                {
+                    _id: 4,
+                    tag: 'Vegetable',
+                    title: 'Vegan Red Tomato',
+                    price: 20,
+                    discount: 15,
+                    rating: 5,
+                    image: '/images/content/tomato.png'
+
+                },
+                {
+                    _id: 5,
+                    tag: 'Health',
+                    title: 'Mung Bean',
+                    price: 20,
+                    discount: 45,
+                    rating: 5,
+                    image: '/images/content/mung-bean.png'
+
+                },
+                {
+                    _id: 6,
+                    tag: 'Nuts',
+                    title: 'Brown Hazelnut',
+                    price: 20,
+                    discount: 40,
+                    rating: 4,
+                    image: '/images/content/brown-hazelnut.png'
+
+                },
+                {
+                    _id: 7,
+                    tag: 'Fresh',
+                    title: 'Eggs',
+                    price: 20,
+                    discount: 15,
+                    rating: 5,
+                    image: '/images/content/eggs.png'
+
+                },
+                {
+                    _id: 8,
+                    tag: 'Fresh',
+                    title: 'Zelco Suji Elaichi Rusk',
+                    price: 20,
+                    discount: 25,
+                    rating: 4,
+                    image: '/images/content/zelco.png'
+
+                },
+            ]
         }
     ]
 }
