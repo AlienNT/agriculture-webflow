@@ -29,22 +29,31 @@ import CartButton from "./siteComponents/CartButton.vue";
 
 <style scoped lang="scss">
 $headerBGColor: #FFFFFF;
+$headerPadding: 20px;
 .header {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: $headerPadding;
+  padding-bottom: $headerPadding;
   position: sticky;
   top: 0;
   z-index: 2;
   background: $headerBGColor;
 }
 
+.header-container {
+  max-width: 1600px;
+}
+
 .header-row {
-  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .header-col {
   display: flex;
   align-items: center;
+  flex: none;
+}
+
+.header-col__navigation {
   flex: 1 1 auto;
 }
 
