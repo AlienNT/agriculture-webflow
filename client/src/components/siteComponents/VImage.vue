@@ -35,7 +35,10 @@ function onError() {
 }
 
 const backgroundImageStyle = computed(() => {
-  return `background-image: url(${props.src});`
+  return [
+    props.src ? `background-image: url(${props.src})` : '',
+    `background-size: ${props.objectFit}`
+  ].join('; ')
 })
 </script>
 
@@ -88,6 +91,7 @@ img {
 
 .cover {
   object-fit: cover;
+  background-size: cover;
 }
 
 .no-image {

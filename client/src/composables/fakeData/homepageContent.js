@@ -224,6 +224,28 @@ export default {
                     description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.'
                 },
             ]
+        },
+        {
+            _id: 7,
+            order: 8,
+            type: 'pageGallery',
+            list: [
+                {
+                    _id: 1,
+                    image: '/images/content/home-gallery-1.jpg',
+                    title: 'Organic Juice'
+                },
+                {
+                    _id: 2,
+                    image: '/images/content/home-gallery-2.jpg',
+                    title: 'Organic Food'
+                },
+                {
+                    _id: 3,
+                    image: '/images/content/home-gallery-3.jpg',
+                    title: 'Nuts Cookies'
+                },
+            ]
         }
     ]
 }

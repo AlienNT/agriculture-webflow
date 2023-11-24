@@ -6,6 +6,7 @@ import HomeOffers from "@/components/pageComponents/home/HomeOffers.vue";
 import HomeShop from "@/components/pageComponents/home/HomeShop.vue";
 import HomeOfferProducts from "@/components/pageComponents/home/HomeOfferProducts.vue";
 import HomeWhoWeAre from "@/components/pageComponents/home/HomeWhoWeAre.vue";
+import HomeGallery from "@/components/pageComponents/home/HomeGallery.vue";
 
 const props = defineProps({
   componentType: {
@@ -23,6 +24,7 @@ const components = {
   pageShop: HomeShop,
   pageOfferProducts: HomeOfferProducts,
   pageWhoWeAre: HomeWhoWeAre,
+  pageGallery: HomeGallery
 }
 
 const component = computed(() => {
