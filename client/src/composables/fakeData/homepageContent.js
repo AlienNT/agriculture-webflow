@@ -246,6 +246,66 @@ export default {
                     title: 'Nuts Cookies'
                 },
             ]
+        },
+        {
+            _id: 8,
+            order: 5,
+            type: 'pageTestimonial',
+            title: 'What Our Customer Saying?',
+            cursive: 'Testimonial',
+            background: '/images/pages_design/img/bg_homepage_testimonial.png',
+            reviews: {
+                list: [
+                    {
+                        _id: 1,
+                        image: '/images/content/user_photo.jpg',
+                        rating: 5,
+                        userName: 'Sara Taylor',
+                        role: 'Consumer',
+                        description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.'
+                    },
+                    {
+                        _id: 2,
+                        image: '/images/content/user_photo.jpg',
+                        rating: 5,
+                        userName: 'Sara Taylor',
+                        role: 'Consumer',
+                        description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.'
+                    },
+                    {
+                        _id: 3,
+                        image: '/images/content/user_photo.jpg',
+                        rating: 5,
+                        userName: 'Sara Taylor',
+                        role: 'Consumer',
+                        description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.'
+                    },
+                ]
+            },
+            counters: {
+                list: [
+                    {
+                        _id: 1,
+                        title: 'Organic',
+                        value: '100%'
+                    },
+                    {
+                        _id: 2,
+                        title: 'Active Product',
+                        value: '285'
+                    },
+                    {
+                        _id: 3,
+                        title: 'Organic Orchads',
+                        value: '350+'
+                    },
+                    {
+                        _id: 4,
+                        title: 'Years of Farming',
+                        value: '25+'
+                    },
+                ]
+            }
         }
     ]
 }
