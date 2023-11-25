@@ -32,5 +32,7 @@ defineProps({
 .product-item {
   padding: 10px;
   flex: 1 1 25%;
+  display: flex;
+  justify-content: center;
 }
 </style>
