@@ -3,6 +3,7 @@ import TheHeader from "./components/TheHeader.vue";
 import TheContent from "./components/TheContent.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import {onMounted, ref, watch} from "vue";
+import SubscribeForm from "@/components/SubscribeForm.vue";
 
 const target = ref(null)
 const viewportHeight = ref(null)
@@ -40,6 +41,7 @@ watch(() => viewportHeight.value, () => {
         ref="target"
     >
       <TheContent/>
+      <SubscribeForm/>
       <TheFooter/>
     </main>
   </div>
