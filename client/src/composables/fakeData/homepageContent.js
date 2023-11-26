@@ -306,6 +306,37 @@ export default {
                     },
                 ]
             }
+        },
+        {
+            _id: 9,
+            order: 9,
+            type: 'pageBlog',
+            title: 'Discover weekly content about organic food, & more',
+            cursive: 'News',
+            buttonLabel: 'More News',
+            buttonRoute: '/blog',
+            blog: {
+                list: [
+                    {
+                        _id: 1,
+                        date: 1700957529383,
+                        author: 'By Rachi Card',
+                        title: 'The Benefits of Vitamin D & How to Get It',
+                        description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
+                        buttonLabel: 'Read More',
+                        image: '/images/content/home_blog_1.png'
+                    },
+                    {
+                        _id: 2,
+                        date: 1700957529383,
+                        author: 'By Rachi Card',
+                        title: 'Our Favourite Summertime Tommeto',
+                        description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
+                        buttonLabel: 'Read More',
+                        image: '/images/content/home_blog_2.png'
+                    },
+                ]
+            }
         }
     ]
 }
