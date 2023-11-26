@@ -1,9 +1,10 @@
 <script setup>
+import {routeTo} from "@/helpers/buttonHelper.js";
 import ProductItemList from "@/components/pageComponents/ProductItemList.vue";
 import VCursive from "@/components/siteComponents/VCursive.vue";
 import VTitle from "@/components/siteComponents/VTitle.vue";
 import VButton from "@/components/siteComponents/VButton.vue";
-import {routeTo} from "@/helpers/buttonHelper.js";
+import PageContentTemplate from "@/components/templates/PageContentTemplate.vue";
 
 defineProps({
   content: {
@@ -14,26 +15,32 @@ defineProps({
 
 <template>
   <div class="home-offer-products">
-    <div class="container">
-      <VCursive
-          :value="content?.cursive"
-          class="cursive"
-      />
-      <div class="field-wrapper">
+    <PageContentTemplate>
+      <template v-slot:cursive>
+        <VCursive
+            :value="content?.cursive"
+            class="cursive"
+        />
+      </template>
+      <template v-slot:title>
         <VTitle
             :value="content?.title"
             class="home-offer-products__title"
         />
+      </template>
+      <template v-slot:button>
         <VButton
             :label="content?.buttonLabel"
             :style-type="1"
             @on-click="routeTo(content?.buttonRoute)"
         />
-      </div>
-      <ProductItemList
-          :list-data="content?.list"
-      />
-    </div>
+      </template>
+      <template v-slot:content>
+        <ProductItemList
+            :list-data="content?.list"
+        />
+      </template>
+    </PageContentTemplate>
   </div>
 </template>
 
@@ -41,21 +48,10 @@ defineProps({
 .home-offer-products {
   background: map-get($colors, greenishBlue);
   min-height: $viewportHeight;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .home-offer-products__title {
   color: white;
-  font-size: 50px;
-  font-weight: 800;
 }
 
-.field-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
-}
 </style>

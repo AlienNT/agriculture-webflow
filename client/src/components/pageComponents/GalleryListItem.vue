@@ -33,7 +33,6 @@ defineProps({
 <style scoped lang="scss">
 .gallery-list-item {
   width: 100%;
-  padding: 20px;
 }
 
 .wrapper {
@@ -76,6 +75,7 @@ defineProps({
   align-items: center;
   justify-content: center;
 }
+
 .title {
   font-size: 25px;
 }

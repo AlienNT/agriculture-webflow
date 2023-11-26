@@ -23,15 +23,18 @@ defineProps({
   </ul>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+$listGap: 20px;
+$columns: 4;
+
 .product-item-list {
   display: flex;
   flex-wrap: wrap;
+  gap: $listGap;
 }
 
 .product-item {
-  padding: 10px;
-  flex: 1 1 25%;
+  flex: 1 1 calcFlex($columns, $listGap);
   display: flex;
   justify-content: center;
 }

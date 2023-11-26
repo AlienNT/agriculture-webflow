@@ -22,17 +22,17 @@ defineProps({
   </ul>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+$listGap: 42px;
+
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -20px;
-  margin-left: -20px;
-  overflow-x: hidden;
   flex: 1;
+  gap: $listGap;
 }
 
 .gallery-list__li {
-  flex: 1 1 calc(100% / 3);
+  flex: 1 1 calcFlex(3, $listGap);
 }
 </style>

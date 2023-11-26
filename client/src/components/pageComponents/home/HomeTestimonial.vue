@@ -6,6 +6,7 @@ import VLine from "@/components/siteComponents/VLine.vue";
 import {computed} from "vue";
 import VSlider from "@/components/siteComponents/VSlider.vue";
 import PageReview from "@/components/pageComponents/PageReview.vue";
+import PageContentTemplate from "@/components/templates/PageContentTemplate.vue";
 
 const props = defineProps({
   content: {
@@ -25,49 +26,41 @@ const style = computed(() => {
       class="home-testimonial"
       :style="style"
   >
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <VCursive
-              :value="content?.cursive"
-          />
-          <VTitle
-              :value="content?.title"
-          />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <VSlider
-              :slide-component="PageReview"
-              :slide-list="content?.reviews?.list"
-              :delay="8000"
-              autoplay
-          />
-        </div>
-      </div>
-      <VLine
-          class="home-testimonial__line"
-      />
-      <div class="row">
-        <div class="col">
-          <RoundCounterList
-              :list-data="content?.counters?.list"
-          />
-        </div>
-      </div>
-    </div>
+    <PageContentTemplate title-row-justify="center">
+      <template v-slot:cursive>
+        <VCursive
+            :value="content?.cursive"
+        />
+      </template>
+      <template v-slot:title>
+        <VTitle
+            :value="content?.title"
+        />
+      </template>
+      <template v-slot:content>
+        <VSlider
+            :slide-component="PageReview"
+            :slide-list="content?.reviews?.list"
+            :delay="8000"
+            autoplay
+        />
+        <VLine
+            class="home-testimonial__line"
+        />
+        <RoundCounterList
+            :list-data="content?.counters?.list"
+        />
+      </template>
+    </PageContentTemplate>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .home-testimonial__line {
   margin: 100px 0;
 }
 
 .home-testimonial {
-  padding-top: 160px;
-  padding-bottom: 160px;
   text-align: center;
   background-size: cover;
   background-position: center center;

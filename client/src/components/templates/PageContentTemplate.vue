@@ -1,12 +1,37 @@
+<script setup>
+import {computed, useSlots} from "vue";
+
+const props = defineProps({
+  titleRowJustify: {
+    type: String,
+    default: 'space-between'
+  }
+})
+
+const isButton = computed(() => {
+  return !!useSlots()?.button
+})
+
+const style = computed(() => {
+  return props.titleRowJustify && `justify-content: ${props.titleRowJustify}`
+})
+
+</script>
 <template>
   <div class="template">
     <div class="container template__container">
-      <div class="row template__title-row">
+      <div
+          class="row template__title-row"
+          :style="style"
+      >
         <div class="col template__col">
           <slot name="cursive"/>
           <slot name="title"/>
         </div>
-        <div class="col template__col">
+        <div
+            v-if="isButton"
+            class="col template__col"
+        >
           <slot name="button"/>
         </div>
       </div>
