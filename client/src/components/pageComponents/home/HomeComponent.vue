@@ -8,6 +8,7 @@ import HomeOfferProducts from "@/components/pageComponents/home/HomeOfferProduct
 import HomeWhoWeAre from "@/components/pageComponents/home/HomeWhoWeAre.vue";
 import HomeGallery from "@/components/pageComponents/home/HomeGallery.vue";
 import HomeTestimonial from "@/components/pageComponents/home/HomeTestimonial.vue";
+import HomeBlog from "@/components/pageComponents/home/HomeBlog.vue";
 
 const props = defineProps({
   componentType: {
@@ -26,7 +27,8 @@ const components = {
   pageOfferProducts: HomeOfferProducts,
   pageWhoWeAre: HomeWhoWeAre,
   pageGallery: HomeGallery,
-  pageTestimonial: HomeTestimonial
+  pageTestimonial: HomeTestimonial,
+  pageBlog: HomeBlog
 }
 
 const component = computed(() => {
@@ -41,7 +43,3 @@ const component = computed(() => {
       :content="componentData"
   />
 </template>
-
-<style scoped>
-
-</style>
