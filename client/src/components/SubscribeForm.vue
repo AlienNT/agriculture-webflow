@@ -20,7 +20,7 @@ function setEmail(val) {
 }
 
 function onSubmit() {
-  console.log('onSubmit', state.formData)
+  console.log('form data', state.formData)
 }
 </script>
 
@@ -29,7 +29,7 @@ function onSubmit() {
     <div class="container">
       <form
           class="col form"
-          @submit="onSubmit"
+          @submit.prevent="onSubmit"
       >
         <div class="row form-inner">
           <div class="col">
