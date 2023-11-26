@@ -2,35 +2,19 @@
 import TheHeader from "./components/TheHeader.vue";
 import TheContent from "./components/TheContent.vue";
 import TheFooter from "@/components/TheFooter.vue";
-import {onMounted, ref, watch} from "vue";
 import SubscribeForm from "@/components/SubscribeForm.vue";
+import {onMounted, ref} from "vue";
+import {useEvents} from "@/composables/useEvents.js";
+
+const {setViewport} = useEvents()
 
 const target = ref(null)
-const viewportHeight = ref(null)
-
-function getViewportHeight() {
-  return target.value?.offsetHeight
-}
-
-function setViewportHeight(val) {
-  viewportHeight.value = val
-}
 
 onMounted(() => {
-  setViewportHeight(getViewportHeight())
+  setViewport(target.value)
 })
 
-window.onresize = () => {
-  const height = getViewportHeight()
 
-  if (viewportHeight.value !== height) {
-    setViewportHeight(height)
-  }
-}
-
-watch(() => viewportHeight.value, () => {
-  document.documentElement.style.setProperty('--vh', `${viewportHeight.value}px`)
-}, {immediate: true})
 </script>
 
 <template>

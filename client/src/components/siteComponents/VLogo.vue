@@ -1,10 +1,22 @@
 <script setup>
 
 import LogoImage from "./LogoImage.vue";
+import {useRouter} from "vue-router";
+import {routeTo} from "@/helpers/buttonHelper.js";
+import {useEvents} from "@/composables/useEvents.js";
+
+const {scrollToTop} = useEvents()
+
+const route = useRouter()
+
+function onClick() {
+  route.currentRoute.value.name !== 'home' ? routeTo('/') : scrollToTop()
+}
+
 </script>
 
 <template>
-  <router-link class="logo" to="/">
+  <router-link class="logo" @click.prevent="onClick" to="/">
     <div class="logo-icon">
       <LogoImage/>
     </div>
