@@ -4,6 +4,8 @@ import VTitle from "@/components/siteComponents/VTitle.vue";
 import VButton from "@/components/siteComponents/VButton.vue";
 import {buttonStyle} from "@/helpers/buttonHelper.js";
 import {computed, reactive} from "vue";
+import {useRouter} from "vue-router";
+
 
 const state = reactive({
   formData: {
@@ -15,6 +17,12 @@ const email = computed(() => {
   return state.formData.email
 })
 
+const router = useRouter()
+
+const isShow = computed(() => {
+  return ['notFound', 'service'].every(route => router.currentRoute.value.name !== route)
+})
+
 function setEmail(val) {
   state.formData.email = val
 }
@@ -22,10 +30,14 @@ function setEmail(val) {
 function onSubmit() {
   console.log('form data', state.formData)
 }
+
 </script>
 
 <template>
-  <div class="subscribe-form">
+  <div
+      v-if="isShow"
+      class="subscribe-form"
+  >
     <div class="container">
       <form
           class="col form"
