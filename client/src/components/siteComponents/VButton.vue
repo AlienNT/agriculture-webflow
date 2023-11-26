@@ -11,6 +11,10 @@ const props = defineProps({
     type: String,
     default: 'Button'
   },
+  type: {
+    type: String,
+    default: 'button'
+  },
   styleType: {
     type: Number,
     default: 0
@@ -30,7 +34,7 @@ const styleClass = computed(() => {
 <template>
   <button
       class="button"
-      type="button"
+      :type="type"
       :class="styleClass"
       :disabled="disabled"
       @click="$emit('onClick')"
@@ -83,5 +87,9 @@ const styleClass = computed(() => {
 
 .paginate {
   background: map-get($colors, greenishBlue);
+
+  &:after {
+    display: none;
+  }
 }
 </style>
