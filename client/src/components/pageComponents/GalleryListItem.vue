@@ -76,5 +76,8 @@ defineProps({
   align-items: center;
   justify-content: center;
 }
+.title {
+  font-size: 25px;
+}
 
 </style>
