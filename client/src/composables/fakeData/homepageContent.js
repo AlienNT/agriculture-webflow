@@ -32,13 +32,13 @@ export default {
                     _id: 1,
                     title: 'Organic Foods Only',
                     description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
-                    icon: ''
+                    image: '/images/icon/mailbox.svg'
                 },
                 {
                     _id: 2,
                     title: 'Quality Standards',
                     description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
-                    icon: ''
+                    image: '/images/icon/vegan_food.svg'
                 },
             ]
         },
@@ -62,6 +62,281 @@ export default {
                     image: '/images/pages_design/img/offer_2.jpg'
                 }
             ]
+        },
+        {
+            _id: 4,
+            order: 4,
+            type: 'pageShop',
+            title: 'Our Products',
+            cursive: 'Categories ',
+            buttonLabel: 'Load More',
+            list: [
+                {
+                    _id: 1,
+                    tag: 'Vegetable',
+                    title: 'Calabrese Broccoli',
+                    price: 20,
+                    discount: 35,
+                    rating: 5,
+                    image: '/images/content/broccoli.png'
+
+                },
+                {
+                    _id: 2,
+                    tag: 'Fresh',
+                    title: 'Fresh Banana Fruites',
+                    price: 20,
+                    discount: 30,
+                    rating: 5,
+                    image: '/images/content/banana.png'
+
+                },
+                {
+                    _id: 3,
+                    tag: 'Millets',
+                    title: 'White Nuts',
+                    price: 20,
+                    discount: 25,
+                    rating: 4,
+                    image: '/images/content/white-nuts.png'
+
+                },
+                {
+                    _id: 4,
+                    tag: 'Vegetable',
+                    title: 'Vegan Red Tomato',
+                    price: 20,
+                    discount: 15,
+                    rating: 5,
+                    image: '/images/content/tomato.png'
+
+                },
+                {
+                    _id: 5,
+                    tag: 'Health',
+                    title: 'Mung Bean',
+                    price: 20,
+                    discount: 45,
+                    rating: 5,
+                    image: '/images/content/mung-bean.png'
+
+                },
+                {
+                    _id: 6,
+                    tag: 'Nuts',
+                    title: 'Brown Hazelnut',
+                    price: 20,
+                    discount: 40,
+                    rating: 4,
+                    image: '/images/content/brown-hazelnut.png'
+
+                },
+                {
+                    _id: 7,
+                    tag: 'Fresh',
+                    title: 'Eggs',
+                    price: 20,
+                    discount: 15,
+                    rating: 5,
+                    image: '/images/content/eggs.png'
+
+                },
+                {
+                    _id: 8,
+                    tag: 'Fresh',
+                    title: 'Zelco Suji Elaichi Rusk',
+                    price: 20,
+                    discount: 25,
+                    rating: 4,
+                    image: '/images/content/zelco.png'
+
+                },
+            ]
+        },
+        {
+            _id: 5,
+            order: 6,
+            type: 'pageOfferProducts',
+            title: 'We Offer Organic For You',
+            cursive: 'Offer',
+            buttonRoute: '/shop',
+            buttonLabel: 'View All Product',
+            list: [
+                {
+                    _id: 1,
+                    tag: 'Vegetable',
+                    title: 'Broccoli',
+                    price: 20,
+                    discount: 45,
+                    rating: 5,
+                    image: "/images/content/broccoli.png"
+                },
+                {
+                    _id: 2,
+                    tag: 'Vegetable',
+                    title: 'Squash',
+                    price: 20,
+                    discount: 40,
+                    rating: 5,
+                    image: '/images/content/squash.png'
+                },
+                {
+                    _id: 3,
+                    tag: 'Vegetable',
+                    title: 'Onion',
+                    price: 20,
+                    discount: 20,
+                    rating: 5,
+                    image: '/images/content/onion.png'
+                },
+                {
+                    _id: 4,
+                    tag: 'Vegetable',
+                    title: 'Cabbage',
+                    price: 20,
+                    discount: 20,
+                    rating: 5,
+                    image: '/images/content/cabbage.png'
+                },
+            ]
+        },
+        {
+            _id: 6,
+            order: 7,
+            type: 'pageWhoWeAre',
+            title: 'Econis is a Friendly Organic Store',
+            cursive: 'Eco Friendly',
+            background: '/images/pages_design/img/bg_who-we-are.jpg',
+            list: [
+                {
+                    _id: 1,
+                    title: 'Start with Our Company First',
+                    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.'
+                },
+                {
+                    _id: 2,
+                    title: 'Learn How to Grow Yourself',
+                    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.'
+                },
+                {
+                    _id: 3,
+                    title: 'Farming Strategies of Today',
+                    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.'
+                },
+            ]
+        },
+        {
+            _id: 7,
+            order: 8,
+            type: 'pageGallery',
+            list: [
+                {
+                    _id: 1,
+                    image: '/images/content/home-gallery-1.jpg',
+                    title: 'Organic Juice'
+                },
+                {
+                    _id: 2,
+                    image: '/images/content/home-gallery-2.jpg',
+                    title: 'Organic Food'
+                },
+                {
+                    _id: 3,
+                    image: '/images/content/home-gallery-3.jpg',
+                    title: 'Nuts Cookies'
+                },
+            ]
+        },
+        {
+            _id: 8,
+            order: 5,
+            type: 'pageTestimonial',
+            title: 'What Our Customer Saying?',
+            cursive: 'Testimonial',
+            background: '/images/pages_design/img/bg_homepage_testimonial.png',
+            reviews: {
+                list: [
+                    {
+                        _id: 1,
+                        image: '/images/content/user_photo.jpg',
+                        rating: 5,
+                        userName: 'Sara Taylor',
+                        role: 'Consumer',
+                        description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.'
+                    },
+                    {
+                        _id: 2,
+                        image: '/images/content/user_photo.jpg',
+                        rating: 5,
+                        userName: 'Sara Taylor',
+                        role: 'Consumer',
+                        description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.'
+                    },
+                    {
+                        _id: 3,
+                        image: '/images/content/user_photo.jpg',
+                        rating: 5,
+                        userName: 'Sara Taylor',
+                        role: 'Consumer',
+                        description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.'
+                    },
+                ]
+            },
+            counters: {
+                list: [
+                    {
+                        _id: 1,
+                        title: 'Organic',
+                        value: '100%'
+                    },
+                    {
+                        _id: 2,
+                        title: 'Active Product',
+                        value: '285'
+                    },
+                    {
+                        _id: 3,
+                        title: 'Organic Orchads',
+                        value: '350+'
+                    },
+                    {
+                        _id: 4,
+                        title: 'Years of Farming',
+                        value: '25+'
+                    },
+                ]
+            }
+        },
+        {
+            _id: 9,
+            order: 9,
+            type: 'pageBlog',
+            title: 'Discover weekly content about organic food, & more',
+            cursive: 'News',
+            buttonLabel: 'More News',
+            buttonRoute: '/blog',
+            blog: {
+                list: [
+                    {
+                        _id: 1,
+                        date: 1700957529383,
+                        author: 'By Rachi Card',
+                        title: 'The Benefits of Vitamin D & How to Get It',
+                        description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
+                        buttonLabel: 'Read More',
+                        image: '/images/content/home_blog_1.png'
+                    },
+                    {
+                        _id: 2,
+                        date: 1700957529383,
+                        author: 'By Rachi Card',
+                        title: 'Our Favourite Summertime Tommeto',
+                        description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
+                        buttonLabel: 'Read More',
+                        image: '/images/content/home_blog_2.png'
+                    },
+                ]
+            }
         }
     ]
 }

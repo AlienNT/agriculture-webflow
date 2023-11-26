@@ -87,6 +87,9 @@ const readOnly = computed(() => {
   background: #F9F8F8;
   max-width: 335px;
   padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-category {
@@ -100,9 +103,10 @@ const readOnly = computed(() => {
   width: 0;
   height: 0;
   position: relative;
+  margin-bottom: auto;
 }
 
-.product-title {
+.product-title, .title {
   margin-bottom: 13px;
   font-size: 20px;
   font-weight: 600;

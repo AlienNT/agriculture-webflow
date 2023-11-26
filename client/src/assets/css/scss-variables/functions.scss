@@ -1,0 +1,3 @@
+@function calcFlex($columns, $gap) {
+  @return calc((100% / $columns) - $gap);
+}

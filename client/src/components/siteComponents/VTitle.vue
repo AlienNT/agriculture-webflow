@@ -20,5 +20,7 @@ $color: map-get($colors, greenishBlue);
   font-family: $mainFont;
   font-style: normal;
   line-height: normal;
+  font-size: 50px;
+  font-weight: 800;
 }
 </style>

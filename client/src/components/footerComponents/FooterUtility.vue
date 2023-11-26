@@ -8,11 +8,10 @@ const {utilityPagesList} = useFooterUtility()
 
 <template>
   <div class="footer-utility">
-    <div class="footer-utility__title">
-      <VTitle
-          value="Utility Pages"
-      />
-    </div>
+    <VTitle
+        value="Utility Pages"
+        class="footer-utility__title"
+    />
     <ul class="footer-utility__list">
       <li
           v-for="(linkData, key) in utilityPagesList"

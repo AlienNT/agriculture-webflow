@@ -1,5 +1,6 @@
 <script setup>
 import {computed} from "vue";
+import {buttonClasses, buttonStyle} from "@/helpers/buttonHelper.js";
 
 const props = defineProps({
   disabled: {
@@ -10,6 +11,10 @@ const props = defineProps({
     type: String,
     default: 'Button'
   },
+  type: {
+    type: String,
+    default: 'button'
+  },
   styleType: {
     type: Number,
     default: 0
@@ -19,17 +24,17 @@ const props = defineProps({
 defineEmits([
   'onClick'
 ])
-const classes = ['blue', 'yellow', 'white', "paginate"]
+
 
 const styleClass = computed(() => {
-  return classes[props.styleType] || classes[0]
+  return buttonClasses[props.styleType] || buttonClasses[buttonStyle.BLUE]
 })
 </script>
 
 <template>
   <button
       class="button"
-      type="button"
+      :type="type"
       :class="styleClass"
       :disabled="disabled"
       @click="$emit('onClick')"
@@ -82,5 +87,9 @@ const styleClass = computed(() => {
 
 .paginate {
   background: map-get($colors, greenishBlue);
+
+  &:after {
+    display: none;
+  }
 }
 </style>

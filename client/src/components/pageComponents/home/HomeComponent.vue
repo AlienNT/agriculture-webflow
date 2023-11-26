@@ -3,6 +3,12 @@ import {computed} from "vue";
 import HomeBanner from "@/components/pageComponents/home/HomeBanner.vue";
 import HomeContentCard from "@/components/pageComponents/home/HomeContentCard.vue";
 import HomeOffers from "@/components/pageComponents/home/HomeOffers.vue";
+import HomeShop from "@/components/pageComponents/home/HomeShop.vue";
+import HomeOfferProducts from "@/components/pageComponents/home/HomeOfferProducts.vue";
+import HomeWhoWeAre from "@/components/pageComponents/home/HomeWhoWeAre.vue";
+import HomeGallery from "@/components/pageComponents/home/HomeGallery.vue";
+import HomeTestimonial from "@/components/pageComponents/home/HomeTestimonial.vue";
+import HomeBlog from "@/components/pageComponents/home/HomeBlog.vue";
 
 const props = defineProps({
   componentType: {
@@ -13,15 +19,20 @@ const props = defineProps({
   }
 })
 
+const components = {
+  pageBanner: HomeBanner,
+  pageCardContent: HomeContentCard,
+  pageOffers: HomeOffers,
+  pageShop: HomeShop,
+  pageOfferProducts: HomeOfferProducts,
+  pageWhoWeAre: HomeWhoWeAre,
+  pageGallery: HomeGallery,
+  pageTestimonial: HomeTestimonial,
+  pageBlog: HomeBlog
+}
+
 const component = computed(() => {
-  switch (props.componentData?.type) {
-    case 'pageBanner':
-      return HomeBanner;
-    case 'pageCardContent':
-      return HomeContentCard
-    case 'pageOffers':
-      return HomeOffers
-  }
+  return components[props.componentData?.type]
 })
 
 </script>
@@ -32,7 +43,3 @@ const component = computed(() => {
       :content="componentData"
   />
 </template>
-
-<style scoped>
-
-</style>

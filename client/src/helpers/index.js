@@ -11,3 +11,12 @@ export function numberToArray(number) {
 export function getWithDiscount(value, percent) {
     return value && percent ? value - (value / 100 * percent) : value
 }
+
+export function dateWithShortMonth(value, locales = 'en') {
+    const date = new Date(value)
+
+    return {
+        day: date.getDate(),
+        month: date.toLocaleDateString(locales, {month: 'short'})
+    }
+}
